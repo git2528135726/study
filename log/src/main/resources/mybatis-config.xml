@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+
+    <!--<properties resource="org/mybatis/example/config.properties">
+        <property name="username" value="dev_user"/>
+        <property name="password" value="F2Fa3!33TYyg"/>
+    </properties>-->
+
+    <!--<settings>
+        <setting name="cacheEnabled" value="false"/>
+    </settings>-->
+
+    <!--<typeAliases>
+        <typeAlias alias="Blog" type="domain.blog.Blog"/>
+    </typeAliases>-->
+
+    <!-- 类型转换 -->
+    <!--<typeHandlers>
+        <typeHandler handler="org.mybatis.example.ExampleTypeHandler"/>
+    </typeHandlers>-->
+
+    <!-- MyBatis 每次创建结果对象的新实例时，它都会使用一个对象工厂（ObjectFactory）实例来完成 -->
+    <!--<objectFactory type="org.mybatis.example.ExampleObjectFactory">
+        <property name="someProperty" value="100"/>
+    </objectFactory>-->
+
+    <!--<plugins>
+        <plugin interceptor="org.mybatis.example.ExamplePlugin">
+            <property name="someProperty" value="100"/>
+        </plugin>
+    </plugins>-->
+
+    <environments default="development">
+        <environment id="development">
+            <transactionManager type="JDBC"/>
+            <dataSource type="POOLED">
+                <property name="driver" value="com.mysql.cj.jdbc.Driver"/>
+                <property name="url" value="jdbc:mysql://192.168.137.133:3306/study?characterEncoding=UTF8"/>
+                <property name="username" value="root"/>
+                <property name="password" value="123456"/>
+            </dataSource>
+            <!--<databaseIdProvider type="DB_VENDOR">
+                <property name="SQL Server" value="sqlserver"/>
+                <property name="DB2" value="db2"/>
+                <property name="Oracle" value="oracle" />
+            </databaseIdProvider>-->
+        </environment>
+    </environments>
+
+    <mappers>
+        <mapper resource="mybatis/BlogMapper.xml"/>
+    </mappers>
+
+</configuration>
