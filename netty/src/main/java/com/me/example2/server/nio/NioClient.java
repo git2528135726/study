@@ -6,7 +6,6 @@ import java.nio.channels.SocketChannel;
 
 public class NioClient {
     public static void main(String[] args) {
-
         try {
             SocketChannel channel = SocketChannel.open(new InetSocketAddress(8090));
             //channel.
@@ -15,6 +14,5 @@ public class NioClient {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 }
