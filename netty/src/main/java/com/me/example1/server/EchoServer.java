@@ -20,11 +20,11 @@ public class EchoServer {
 
     public static void main(String[] args) throws Exception {
 
-        if (args.length != 1) {
+        /*if (args.length != 1) {
             System.err.println("Usage: " + EchoServer.class.getSimpleName() + " <port>");
         }
-        int port = Integer.parseInt(args[0]);
-        new EchoServer(port).start();
+        int port = Integer.parseInt(args[0]);*/
+        new EchoServer(1816).start();
     }
 
     public void start() throws Exception {
