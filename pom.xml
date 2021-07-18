@@ -13,6 +13,9 @@
         <module>log</module>
         <module>netty</module>
         <module>ConcurrentProgram</module>
+        <module>perl</module>
+        <module>newcoder</module>
+        <module>code</module>
     </modules>
 
 </project>
